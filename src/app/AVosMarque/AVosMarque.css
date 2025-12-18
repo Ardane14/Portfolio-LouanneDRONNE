@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../../img/Cyberway\ Riders.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .font-face {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+
+/* Corps de la page */
+body {
+    background-color: #000; 
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.text-left {
+    text-align: left;
+}
+
+
+.details {
+    text-align: justify;
+}
+
+/* En-tête */
+.header-section {
+    background-image: url('../../img/header-bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: white;
+    text-shadow: 0 0 15px #00ffffcc;
+    opacity: 0;
+    animation: fadeInHeader 1s forwards;
+}
+
+/* Effet de style néon */
+.container-neon {
+    padding: 25px;
+    border: 10px solid #00ffffcc;
+    border-radius: 2px;
+    position: relative;
+    animation: neon-effect-box 0.8s cubic-bezier(0.94, 0.46, 0.52, 1.16) infinite alternate;
+    box-shadow: 0 0 8px #00ffffcc, 0 0 16px #00ffffcc, 0 0 24px #00ffffcc;
+}
+
+@keyframes neon-effect-box {
+    0% {
+        box-shadow: 0 0 4px #00ffffcc, 0 0 8px #00ffffcc, 0 0 12px #00ffffcc;
+    }
+    50% {
+        box-shadow: 0 0 8px #00ffffcc, 0 0 16px #00ffffcc, 0 0 20px #00ffffcc;
+    }
+    100% {
+        box-shadow: 0 0 4px #00ffffcc, 0 0 8px #00ffffcc, 0 0 12px #00ffffcc;
+    }
+}
+
+
+/* Animation de l'apparition du header */
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour chaque élément du projet au scroll */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInElement 1s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInElement {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*titres néon */
+.neon-text {
+    color: #00f9ff;
+}
+
+/* Éléments du projet */
+#elements .element {
+    text-align: center;
+    color: #f0f0f0;
+}
+
+#elements .element img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#elements .element img:hover {
+    transform: scale(1.05);
+}
+
+#elements .element h5 {
+    margin-top: 20px;
+    color: #00f9ff;
+}
+
+#elements .element.text-right {
+    text-align: right;
+}
+
+#elements .element.text-left {
+    text-align: left;
+}
+
+/* Boutons de navigation */
+.button {
+    position: relative;
+    padding: 1.5rem 4rem;
+    border: 1px solid #00f9ff;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+}
+
+.btn-border {
+    color: white !important;
+}
+
+.btn-border {
+    &::before,
+    &::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border: inherit;
+        transition: 0.5s;
+    }
+
+    &::before {
+        top: -15px;
+        left: -15px;
+        border-width: 2px 0 0 2px;
+    }
+    &::after {
+        bottom: -15px;
+        right: -15px;
+        border-width: 0 2px 2px 0;
+    }
+    &:hover::before,
+    &:hover::after {
+        width: calc(100% + 28px);
+        height: calc(100% + 28px);
+    }
+}
+
+.btn-border:hover {
+    text-decoration: none;
+    color: #00f9ff !important;
+}
+
+.btn-cyber-punk:hover {
+    text-decoration: none;
+    color: #000 !important;
+    background-color: #43efff ;
+    border: 1px solid #43efff ;
+}
+
+.btn-cyber-punk {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 75%);
+    background-color: #00f9ff;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: #2981B3 ;
+        color: #000 !important;
+    }
+}
+
+a {
+    color:#000;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Récompenses et autres badges */
+.alert {
+    margin: 5px;
+  }
+  
+  .alert-simple.alert-success {
+    border: 1px solid rgba(36, 241, 6, 0.46);
+    background-color: rgba(7, 149, 66, 0.12);
+    box-shadow: 0px 0px 2px #259c08;
+    color: #0ad406;
+    text-shadow: 2px 1px #00040a;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 8px 12px; /* Ajustez si besoin */
+  }
+  
+  .alert-success:hover {
+    background-color: rgba(7, 149, 66, 0.35);
+    transition: 0.5s;
+  }
+  
+  .greencross {
+    font-size: 18px;
+    color: #25ff0b;
+    text-shadow: none;
+  }
+
+  .alert>.start-icon {
+    margin-right: 5px;
+  }
+  
+  .alert-simple.alert-info {
+    border: 1px solid rgba(6, 44, 241, 0.46);
+    background-color: rgba(7, 73, 149, 0.12);
+    box-shadow: 0px 0px 2px #0396ff;
+    color: #0396ff;
+    text-shadow: 2px 1px #00040a;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 8px 12px; 
+  }
+  
+  .alert-info:hover {
+    background-color: rgba(7, 73, 149, 0.35);
+    transition: 0.5s;
+  }
+  
+  .blue-cross {
+    font-size: 18px;
+    color: #0bd2ff;
+    text-shadow: none;
+  }
+
+/* Boutton glitch */
+
+.clic, .clic::after {
+    width: 200px; 
+    height: 50px; 
+    font-size: 24px; /* Taille de police réduite */
+    background: linear-gradient(45deg, transparent 5%, #00A6FF 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 50px;
+    box-shadow: 4px 0px 0px #0095CC;
+    outline: transparent;
+    position: relative;
+  }
+  
+  .clic::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -4px 0 0);
+    --slice-2: inset(50% -4px 30% 0);
+    --slice-3: inset(10% -4px 85% 0);
+    --slice-4: inset(80% -4px 43% 0);
+    --slice-5: inset(80% -4px 5% 0);
+    
+    content: "CYBER-PUNKER";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #007ACC);
+    text-shadow: -2px -2px 0px #00A6FF, 2px 2px 0px #005F99;
+    clip-path: var(--slice-0);
+  }
+  
+  /* Animation */
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-1px, 5px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 1px);
+    }
+    20% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 3px);
+    }
+    40% {
+      clip-path: var(--slice-5);
+      transform: translate(0px, 5px);
+    }
+    50% {
+      clip-path: var(--slice-4);
+      transform: translate(-5px, 3px);
+    }
+    60% {
+      clip-path: var(--slice-2);
+      transform: translate(3px, 0px);
+    }
+    70% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, -3px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(-10px, 3px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-5px, 5px);
+    }
+    100% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, -5px);
+    }
+  }
+  
+  .clic:hover::after {
+    animation: 2s glitch;
+    animation-timing-function: steps(2, end);
+  }
+  
+/* Style pour le lien contenant l'image ronde */
+.round-photo {
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  z-index: 1000;
+}
+
+/* Style pour l'image elle-même */
+.round-photo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Effet de survol */
+.round-photo img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #F5E4A2;
+}
+
