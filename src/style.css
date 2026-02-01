@@ -9994,6 +9994,27 @@ h6,
   }
 }
 
+@media (max-width: 768px) {
+  #action {
+    display: none;
+  }
+
+  #console {
+    display: none;
+  }
+
+  .cd {
+    display: block;
+    text-align: center;
+  }
+
+  .cd img {
+    width: 70vw;
+    max-width: 300px;
+  }
+}
+
+
 .cd {
   animation: rollRight 2s ease forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -10001,6 +10022,9 @@ h6,
 
 .the-works{
   border-radius: 100%; 
+  width: 40vw;      /* s’adapte à l’écran */
+  max-width: 500px; /* limite sur très grands écrans */
+  min-width: 200px; /* évite trop petit */
 }
 
 .the-works:hover {
