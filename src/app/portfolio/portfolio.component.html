@@ -32,6 +32,26 @@
                 </button>
             </a>
         </div>
+        <div id="portfolio-filter" style="
+            position: fixed;
+            top: 5%;
+            left: 5%;
+            padding: 12px;
+        ">
+            <button class="btn btn-sm btn-outline-light mb-1" onclick="filterProjects('all')">
+                All
+            </button>
+            <button class="btn btn-sm btn-outline-light mb-1" onclick="filterProjects('game')">
+                Game
+            </button>
+            <button class="btn btn-sm btn-outline-light mb-1" onclick="filterProjects('narration')">
+                Narration
+            </button>
+            <button class="btn btn-sm btn-outline-light" onclick="filterProjects('programming')">
+                Programming
+            </button>
+        </div>
+
 
         <!-- Portfolio left End -->
 
@@ -40,8 +60,7 @@
             <div class="container">
                 <div class="font">
 
-                    <div class="hero-center-section">
-                        
+                    <div class="hero-center-section" data-category="game">
                         <div class="left-text">
                             <span class="badge badge-pill badge-light">Game</span>
                             <br>
@@ -49,7 +68,6 @@
                             A strategic sci-fi board game centered on smuggling, risk-taking and emergent
                             player narratives. The project explores game design through mechanics, balance, and narrative world-building. From rules and visual identity to playtesting and iteration, Voydof Space reflects a complete creative pipeline and a strong interest in systemic storytelling.
                         </div>
-
                         <div class="container float-right">
                             <div class="row justify-content-center">
                                 <div class="col-md-8">
@@ -63,7 +81,7 @@
                         </div>
                     </div>
 
-                     <div class="hero-center-section">
+                     <div class="hero-center-section" data-category="game narration">
                         <div class="left-text">
                             <span class="badge badge-pill badge-light">Game</span>
                             <span class="badge badge-pill badge-light">Narration</span>
@@ -82,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div class="hero-center-section">
+                    <div class="hero-center-section" data-category="narration">
                         <div class="left-text">
                             <span class="badge badge-pill badge-light">Narration</span>
                             <br>
@@ -100,11 +118,11 @@
                         </div>
                     </div>
 
-                    <div class="hero-center-section">
+                    <div class="hero-center-section" data-category="game narration programming">
                         <div class="left-text">
                             <span class="badge badge-pill badge-light">Game</span>
                             <span class="badge badge-pill badge-light">Narration</span>
-                            <span class="badge badge-pill badge-light">Programation</span>
+                            <span class="badge badge-pill badge-light">Programming</span>
                             <br>
                             <br>
                             ISALIVE is a narrative physical escape game where players interact with an AI named AIDEN. Designed to question AI ethics and technological dependence, the experience offers three endings shaped by player choices. I worked on the story, gameplay mechanics, and AI programming.
@@ -120,10 +138,10 @@
                         </div>
                     </div>
 
-                    <div class="hero-center-section">
+                    <div class="hero-center-section" data-category="game programming">
                         <div class="left-text">
                             <span class="badge badge-pill badge-light">Game</span>
-                            <span class="badge badge-pill badge-light">Programation</span>
+                            <span class="badge badge-pill badge-light">Programming</span>
                             <br>
                             <br>
                             On Your Marks is a multidisciplinary graduation project developed as a full communication campaign for the Athletics League of New Caledonia. The project combines web documentaries, interactive games, and a dedicated website to promote athletics through engaging digital experiences.
@@ -139,10 +157,10 @@
                         </div>
                     </div>
 
-                    <div class="hero-center-section">
+                    <div class="hero-center-section" data-category="programming narration">
                         <div class="left-text">
                             <span class="badge badge-pill badge-light">Narration</span>
-                            <span class="badge badge-pill badge-light">Programation</span>
+                            <span class="badge badge-pill badge-light">Programming</span>
                             <br>
                             <br>
                             ATUA is a fictional interactive performance project exploring the relationship between live movement and generative visuals. Designed as a stage experience, dancers interact with real-time graphic elements through motion tracking and interactive systems. Although never staged, the project served as a research and experimentation space using tools such as TouchDesigner, Kinect, and Processing to explore embodied interaction and digital scenography.
@@ -160,22 +178,22 @@
                         
                     <div class="section padding-top-bottom over-hide z-bigger">
                         <ul class="slide-buttons">
-                            <li class="">
+                            <li class="" data-category="game">
                                 <a href="../VoydofSpace/VoydofSpace.html" class="hover-target" class="hover-target" data-hover="Voydof Space">Voydof Space</a>                                
                             </li>
-                            <li class="">
+                            <li class="" data-category="game narration">
                                 <a href="../HUMUS/HUMUS.html" class="hover-target" data-hover="Humus">Humus</a>
                             </li>
-                            <li class="">
+                            <li class="" data-category="narration">
                                 <a href="../Jaspe/Jaspe.html" class="hover-target" data-hover="The Jasper Crown">The Jasper Crown</a>
                             </li>
-                            <li class="">
+                            <li class="" data-category="game narration programming">
                                 <a href="#0" class="hover-target" data-hover="ISALIVE">ISALIVE</a>
                             </li>
-                            <li class="">
+                            <li class="" data-category="game programming">
                                 <a href="../AVosMarque/AVosMarque.html" class="hover-target projet" data-hover="On your marks">On your marks</a>
                             </li>
-                            <li class="">
+                            <li class="" data-category="programming narration">
                                 <a href="../ATUA/ATUA.html" class="hover-target" data-hover="Atua">Atua</a>
                             </li>
                         </ul>
@@ -346,6 +364,38 @@
             });
         });
         </script>
+
+       <script>
+        function filterProjects(category) {
+
+            const projects = document.querySelectorAll('.hero-center-section');
+            const menuItems = document.querySelectorAll('.slide-buttons li');
+
+            // Filtrage des sections
+            projects.forEach(project => {
+                const categories = project.dataset.category || '';
+
+                if (category === 'all' || categories.includes(category)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+
+            // Filtrage des liens (li)
+            menuItems.forEach(item => {
+                const categories = item.dataset.category || '';
+
+                if (category === 'all' || categories.includes(category)) {
+                    item.style.display = 'list-item';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        </script>
+
+
 </body>
 
 </html>
