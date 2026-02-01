@@ -32,6 +32,29 @@
             The Crown of Jasper is a heroic fantasy novel that immerses the reader in an ancient world where magic, gods, and mysteries intertwine with power struggles. The story follows characters with intertwined destinies, each seeking to carve out a place for themselves in this world... or at least survive.
         </p>
         <img src="../../img/Toss.png" class="img-fluid w-25 d-block mx-auto" alt="Embleme de Toss">
+        <button class="show-more-btn clic d-block mx-auto" onclick="openLore()">
+            Learn more
+        </button>
+
+        <div id="loreOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:9999; overflow-y:auto;">
+            <button onclick="closeLore()" style="position:fixed; top:20px; right:20px;">
+                Close
+            </button>
+
+            <div style="width:40%; margin:100px auto;">
+                <img src="../../img/Lore Jaspe/1.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/2.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/3.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/4.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/5.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/6.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/7.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/8.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/Monnaies.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/Carte1.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Lore Jaspe/Carte2.jpg" style="width:100%; margin-bottom:40px;">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -71,52 +94,34 @@
             L’éclat de lumière la déstabilisa suffisamment pour que l’inconnu, après avoir utilisé la clarté de sa lame pour l’éblouir, lui assène une entaille superficielle sur les côtes. </br> </br>
             Eloween trébucha dans le sable noir sous l’effet de la douleur. Le poids de son manteau gorgé d’eau l’attira en arrière. Le froid de l’eau sur son visage lui coupa le souffle et le sel lui piqua les yeux. Elle était tombée dans les vagues et ne distinguait plus son adversaire. Le soleil qui déclinait sur la mer et qui l’avait handicapé plus tôt, fut caché par une ombre au-dessus d’elle. Eloween comprit que l’inconnu avait pivoté sur la gauche. Elle roula donc sur la droite dans un tourbillon de sable noir, de bulles d’air et d’eau de mer.
         </p>
-        <button class="show-more-btn clic" onclick="openPDF()">
+        <button class="show-more-btn clic" onclick="openChapter()">
             Chapitre 1
         </button>
       </div>
     </div>
   </section>
 
-  <div id="pdfOverlay" style="
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.95);
-    z-index:9999;
-    overflow-y:auto;
-">
-    <button onclick="closePDF()" style="
-        position:fixed;
-        top:20px;
-        right:20px;
-        background:none;
-        border:1px solid white;
-        color:white;
-        padding:10px 15px;
-        cursor:pointer;
-        z-index:10000;
-    ">
-        Close
-    </button>
+        <div id="chapterOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:9999; overflow-y:auto;">
+            <button onclick="closeChapter()" style="position:fixed; top:20px; right:20px;">
+                Close
+            </button>
 
-    <div style="width:40%; margin:100px auto;">
-        <img src="../../img/Chapitre 1 Portfolio/1.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/2.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/3.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/4.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/5.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/6.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/7.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/8.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/9.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/10.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/11.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/12.jpg" style="width:100%; margin-bottom:40px;">
-        <img src="../../img/Chapitre 1 Portfolio/13.jpg" style="width:100%; margin-bottom:40px;">
-
-    </div>
-</div>
+            <div style="width:40%; margin:100px auto;">
+                <img src="../../img/Chapitre 1 Portfolio/1.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/2.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/3.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/4.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/5.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/6.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/7.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/8.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/9.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/10.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/11.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/12.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Chapitre 1 Portfolio/13.jpg" style="width:100%; margin-bottom:40px;">
+            </div>
+        </div>
 
 
 
@@ -157,22 +162,25 @@
         }
     }
 </script>
+
+<!-- pour ouvrir les pdf -->
 <script>
-function openPDF() {
-    document.getElementById('pdfOverlay').style.display = 'block';
+function openLore() {
+    document.getElementById('loreOverlay').style.display = 'block';
 }
 
-function closePDF() {
-    document.getElementById('pdfOverlay').style.display = 'none';
+function closeLore() {
+    document.getElementById('loreOverlay').style.display = 'none';
+}
+
+function openChapter() {
+    document.getElementById('chapterOverlay').style.display = 'block';
+}
+
+function closeChapter() {
+    document.getElementById('chapterOverlay').style.display = 'none';
 }
 </script>
-<style>
-iframe {
-    user-select: none;
-    -webkit-user-select: none;
-    pointer-events: auto;
-}
-</style>
 
 
 </body>

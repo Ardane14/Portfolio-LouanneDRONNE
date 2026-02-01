@@ -69,6 +69,44 @@
             </div>
         </div>
 
+        <button class="show-more-btn clic d-block mx-auto" onclick="openLore()">
+            Learn more
+        </button>
+
+        <div id="loreOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:9999; overflow-y:auto;">
+            <button onclick="closeLore()" style="position:fixed; top:20px; right:20px;">
+                Close
+            </button>
+
+            <div style="width:40%; margin:100px auto;">
+                <img src="../../img/Humus/1.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/2.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/3.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/4.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/5.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/6.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/7.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/8.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/9.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/10.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/11.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/12.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/13.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/14.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/15.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/16.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/17.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/18.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/19.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/20.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/21.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/22.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/23.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/24.jpg" style="width:100%; margin-bottom:40px;">
+                <img src="../../img/Humus/25.jpg" style="width:100%; margin-bottom:40px;">
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -93,6 +131,17 @@
         once: true,
         offset: 120,
     });
+</script>
+
+<!-- pour ouvrir les pdf -->
+<script>
+    function openLore() {
+        document.getElementById('loreOverlay').style.display = 'block';
+    }
+
+    function closeLore() {
+        document.getElementById('loreOverlay').style.display = 'none';
+    }
 </script>
 
 </body>
