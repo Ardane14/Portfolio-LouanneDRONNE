@@ -233,7 +233,7 @@
                     ISALIVE
                     </h4>
                     <p style="color:#ffffff;line-height:1.6;font-size:15px;">
-                    ISALIVE is an escape game where players interact with an AI named AIDEN. 
+                    ISALIVE is an escape game where players interact with an AI named AIDAN. 
                     Designed to question AI ethics and technological dependence, the experience offers three endings shaped by player choices.
                     </p>
                     <span class="badge badge-pill badge-light">Programation</span>
@@ -483,19 +483,27 @@
     <script src="js/main.js"></script>
 
     <script>
-        document.getElementById('cd').addEventListener('click', function(event) {
-          event.preventDefault(); // Empêche le lien de fonctionner immédiatement
-          var img = this.querySelector('img');
-          
-          // Appliquer l'animation
-          img.classList.add('cd');
-        
-          // Attendre la fin de l'animation (1 seconde ici) avant de suivre le lien
-          setTimeout(function() {
-            window.location.href = event.target.closest('a').href;
-          }, 1500); // 1000ms = 1s (la durée de l'animation)
+        const cdLink = document.getElementById('cd');
+        const cdImg = cdLink.querySelector('img');
+
+        // Animation + redirection
+        cdLink.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            cdImg.classList.remove('cd'); // sécurité
+            void cdImg.offsetWidth;       // force le reflow
+            cdImg.classList.add('cd');
+
+            setTimeout(() => {
+            window.location.href = cdLink.href;
+            }, 1500);
         });
-        </script>
+
+        // 🔁 Réinitialisation quand on revient sur la page
+        window.addEventListener('pageshow', function () {
+            cdImg.classList.remove('cd');
+        });
+    </script>
         
     <script>
         $(document).ready(function(){
