@@ -31,9 +31,29 @@
     <div class="container">
         <h2 class="text-center mb-4 neon-text">Concept</h2>
         <p class="text-justify">Voydof Space immerses players in a science fiction universe where they take on the role of space smugglers striving to become the most influential. To achieve this goal, each player must complete a variety of missions, from collecting extraterrestrial creatures on different planets, engaging in black market trafficking, battling other players, to exploring the far reaches of space. Through deck-building and strategy mechanics, players create and enhance their own deck to optimize their actions. This game offers a tactical and competitive challenge, perfect for science fiction and adventure enthusiasts.</p>
+        <button class="show-more-btn clic d-block mx-auto" onclick="openLore()">
+            See more
+        </button>
         <img src="../../img/Logo_voydof.png" class="img-fluid mb-3 w-25 d-block mx-auto" alt="Direction artistique">
     </div>
 </section>
+
+<div id="loreOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:9999; overflow-y:auto;">
+    <button onclick="closeLore()" style="position:fixed; top:20px; right:20px;">
+        Close
+    </button>
+
+    <div style="width:40%; margin:100px auto;">
+        <img src="../../img/Règles Voydof Space/1.jpg" style="width:100%; margin-bottom:40px;">
+        <img src="../../img/Règles Voydof Space/2.jpg" style="width:100%; margin-bottom:40px;">
+        <img src="../../img/Règles Voydof Space/3.jpg" style="width:100%; margin-bottom:40px;">
+        <img src="../../img/Règles Voydof Space/4.jpg" style="width:100%; margin-bottom:40px;">
+        <img src="../../img/Règles Voydof Space/5.jpg" style="width:100%; margin-bottom:40px;">
+        <img src="../../img/Règles Voydof Space/6.jpg" style="width:100%; margin-bottom:40px;">
+        <img src="../../img/Règles Voydof Space/7.jpg" style="width:100%; margin-bottom:40px;">
+        <img src="../../img/Règles Voydof Space/8.jpg" style="width:100%; margin-bottom:40px;">
+    </div>
+</div>
 
 <!-- Section Élément du Projet -->
 <section id="elements" class="py-3">
@@ -69,9 +89,6 @@
                 <div class="element text-right">
                     <h5 class="neon-text text-left">Art Direction</h5>
                     <p class="details">After establishing the game's universe, we explored several artistic directions to reflect the themes of science fiction and smuggling. We chose a futuristic aesthetic with purple and gold tones to create a distinct graphic identity. Every visual element was carefully designed to enhance the atmosphere of the game, from the cards to the board elements, including the game box.</p>
-                    <button class="show-more-btn clic" onclick="openPDF()">
-                        See more
-                    </button>
                 </div>
             </div>
         </div>
@@ -197,6 +214,17 @@
 <script>
     document.getElementById('localVideo').requestFullscreen();
     document.getElementById('localVideo').play();
+</script>
+
+<!-- pour ouvrir les pdf -->
+<script>
+function openLore() {
+    document.getElementById('loreOverlay').style.display = 'block';
+}
+
+function closeLore() {
+    document.getElementById('loreOverlay').style.display = 'none';
+}
 </script>
 
 </body>
