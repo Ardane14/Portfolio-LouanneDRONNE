@@ -24,36 +24,28 @@
 </head>
 
 <body>
-        <!-- Portfolio left Start -->
-        <div class="lien" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-            <a href="../../index.html">
-                <button class="btn btn-outline-light" role="button">
-                    Home
-                </button>
+        <div class="top-menu bg-primary shadow-sm" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1100; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between;">
+            <!-- Home button -->
+            <a href="../../index.html" class="btn btn-outline-light btn-sm">
+                Home
             </a>
-        </div>
-        <div id="portfolio-filter" style="
-            position: fixed;
-            top: 5%;
-            left: 5%;
-            padding: 12px;
-        ">
-            <button class="btn btn-sm btn-outline-light mb-1" onclick="filterProjects('all')">
-                All
-            </button>
-            <button class="btn btn-sm btn-outline-light mb-1" onclick="filterProjects('game')">
-                Game
-            </button>
-            <button class="btn btn-sm btn-outline-light mb-1" onclick="filterProjects('narration')">
-                Narration
-            </button>
-            <button class="btn btn-sm btn-outline-light" onclick="filterProjects('programming')">
-                Programming
-            </button>
+            <!-- Portfolio filter -->
+            <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-light mr-2" onclick="filterProjects('all')">
+                    All
+                </button>
+                <button class="btn btn-sm btn-outline-light mr-2" onclick="filterProjects('game')">
+                    Game
+                </button>
+                <button class="btn btn-sm btn-outline-light mr-2" onclick="filterProjects('narration')">
+                    Narration
+                </button>
+                <button class="btn btn-sm btn-outline-light" onclick="filterProjects('programming')">
+                    Programming
+                </button>
+            </div>
         </div>
 
-
-        <!-- Portfolio left End -->
 
         <!-- Portfolio right Start -->
         <div class="d-flex flex-column container-fluid py-5 portfolio-section-right">
@@ -63,11 +55,29 @@
                     <div class="hero-center-section" data-category="game">
                         <div class="left-text">
                             <span class="badge badge-pill badge-light">Game</span>
-                            <br>
-                            <br>
+                            <br><br>
                             A strategic sci-fi board game centered on smuggling, risk-taking and emergent
-                            player narratives. The project explores game design through mechanics, balance, and narrative world-building. From rules and visual identity to playtesting and iteration, Voydof Space reflects a complete creative pipeline and a strong interest in systemic storytelling.
+                            player narratives. The project explores game design through mechanics, balance,
+                            and narrative world-building. From rules and visual identity to playtesting and
+                            iteration, Voydof Space reflects a complete creative pipeline and a strong
+                            interest in systemic storytelling.
+                            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.25); display: flex; gap: 20px; font-size: 13px; color: rgba(255,255,255,0.8);">
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Date
+                                    </strong>
+                                    April 2023
+                                </div>
+
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Time Spent
+                                    </strong>
+                                    ~3 month
+                                </div>
+                            </div>
                         </div>
+
                         <div class="container float-right">
                             <div class="row justify-content-center">
                                 <div class="col-md-8">
@@ -88,6 +98,14 @@
                             <br>
                             <br>
                             Humus is a contemporary tabletop role-playing game set in a world where humans possess supernatural abilities, and hero schools and media coverage coexist. Built around a custom skill-based system, the game emphasizes narrative freedom, character development, and player agency. The project reflects a strong focus on storytelling, world coherence, and systemic design rooted in narrative gameplay.
+                            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.25); display: flex; gap: 20px; font-size: 13px; color: rgba(255,255,255,0.8);">
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Date
+                                    </strong>
+                                    Since 2019
+                                </div>
+                            </div>
                         </div>
                         <div class="container float-right">
                             <div class="row justify-content-center">
@@ -106,6 +124,14 @@
                             <br>
                             <br>
                             The Jasper Crown is an original fantasy novel built around a richly developed world and a carefully structured narrative. The project focuses on deep worldbuilding, intertwining political tensions, fractured empires, and individual destinies within a dark fantasy universe. Through a character-driven story, the book explores themes of power, downfall, loyalty, and identity.
+                            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.25); display: flex; gap: 20px; font-size: 13px; color: rgba(255,255,255,0.8);">
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Date
+                                    </strong>
+                                    Since October 2023
+                                </div>
+                            </div>
                         </div>
                         <div class="container float-right">
                             <div class="row justify-content-center">
@@ -126,6 +152,14 @@
                             <br>
                             <br>
                             ISALIVE is a narrative physical escape game where players interact with an AI named AIDEN. Designed to question AI ethics and technological dependence, the experience offers three endings shaped by player choices. I worked on the story, gameplay mechanics, and AI programming.
+                            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.25); display: flex; gap: 20px; font-size: 13px; color: rgba(255,255,255,0.8);">
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Date
+                                    </strong>
+                                    Since September 2025
+                                </div>
+                            </div>
                         </div>
                         <div class="container float-right">
                             <div class="row justify-content-center">
@@ -145,6 +179,21 @@
                             <br>
                             <br>
                             On Your Marks is a multidisciplinary graduation project developed as a full communication campaign for the Athletics League of New Caledonia. The project combines web documentaries, interactive games, and a dedicated website to promote athletics through engaging digital experiences.
+                            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.25); display: flex; gap: 20px; font-size: 13px; color: rgba(255,255,255,0.8);">
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Date
+                                    </strong>
+                                    2024
+                                </div>
+
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Time Spent
+                                    </strong>
+                                    ~9 month
+                                </div>
+                            </div>
                         </div>
                         <div class="container float-right">
                             <div class="row justify-content-center">
@@ -164,6 +213,21 @@
                             <br>
                             <br>
                             ATUA is a fictional interactive performance project exploring the relationship between live movement and generative visuals. Designed as a stage experience, dancers interact with real-time graphic elements through motion tracking and interactive systems. Although never staged, the project served as a research and experimentation space using tools such as TouchDesigner, Kinect, and Processing to explore embodied interaction and digital scenography.
+                            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.25); display: flex; gap: 20px; font-size: 13px; color: rgba(255,255,255,0.8);">
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Date
+                                    </strong>
+                                    2024
+                                </div>
+
+                                <div>
+                                    <strong style="display:block; font-size:11px; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                                        Time Spent
+                                    </strong>
+                                    ~2 month
+                                </div>
+                            </div>
                         </div>
                         <div class="container float-right">
                             <div class="row justify-content-center">
